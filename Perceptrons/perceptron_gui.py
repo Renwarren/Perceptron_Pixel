@@ -35,6 +35,9 @@ def draw_weight(weights,x,y):
         dy += 30
         screen.blit(W,W_Rect)
 
+def pixel_color(value):
+    if value==1: return 'BRIGHT'
+    return 'DARK'
 
 pygame.font.init()
 pygame.display.set_caption("PERCEPTRON PIXEL")
@@ -68,11 +71,12 @@ while ANIMATING:
     draw_weight_Text(str(error),225,250)
     draw_weight(weights,100,100)
     if (i==0):
-        draw_weight_Text(str(predict(weighted_sum(weights,EXAMPLES[i]),THRESHOLD)),200,60)
+        color = pixel_color(predict(weighted_sum(weights,EXAMPLES[i]),THRESHOLD))
     else:
-        draw_weight_Text(str(predicted),200,60)
+        color = pixel_color(predicted)
+        
     
-
+    draw_weight_Text(color,200,60)
     if(error ==0 and i ==15):
         draw_weight_Text('TRAINING COMPLETE',200,280)
     pygame.display.flip()
