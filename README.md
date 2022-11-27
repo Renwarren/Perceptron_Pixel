@@ -1,11 +1,11 @@
 # Perceptron_Pixel
 Artificial Intelligence Assignment on Perceptrons
 
-#REQUIREMENTS
+# REQUIREMENTS
 pygame
 
-#HOW TO RUN
-##Main.py
+# HOW TO RUN
+## Main.py
 Just run and it will display the output to the console
-##perceptron_gui
+## perceptron_gui
 Run and make sure you have pygame installed
